@@ -25,6 +25,8 @@ public class ServerDetailsDto {
     private String webSocketIP;
     private int serverType;
 
+    
+    
     public long getServerID() {
         return serverID;
     }

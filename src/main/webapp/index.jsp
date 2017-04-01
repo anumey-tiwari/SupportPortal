@@ -33,9 +33,9 @@
             <div class="row">
                 <div class="col-lg-3"></div>
                 <div class="col-lg-6">
-                    <form action="Login" method="post">
+                    <form action="Login.html" method="post">
                         <h2 class="text-center">Please sign in</h2>
-                        <input type="text"  class="form-control" placeholder="Email address" required autofocus name="userId">
+                        <input type="text"  class="form-control" placeholder="Email address" required autofocus name="emailId">
                         <br/>
                         <input type="password"  class="form-control" placeholder="Password" required  name="password">
                         <div class="checkbox">

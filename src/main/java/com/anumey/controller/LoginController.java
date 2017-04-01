@@ -10,7 +10,6 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -25,15 +24,17 @@ public class LoginController {
     @Autowired
     private LoginService loginService;
 
-    @RequestMapping(value= "/Login",method = RequestMethod.POST)
+    @RequestMapping(value= "/Login")
     public ModelAndView checkLogin(@RequestParam Map<String,String> requestParams){
         String emailId = requestParams.get("emailId");
         String password = requestParams.get("password");
+        boolean result = loginService.checkAuthentication(emailId, password);
+        String message = " Welcome "+emailId +" ohayo  !!";
+        if(result){
+            return new ModelAndView("loggedIn","message",message);
+        }
         
-        
-        
-        
-        return null;
+        return new ModelAndView("lsdoo","message",message);
     }
     
     

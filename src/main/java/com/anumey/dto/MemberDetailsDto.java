@@ -18,6 +18,12 @@ public class MemberDetailsDto {
     private byte activationStatus;
     private boolean isAdmin;
 
+    public MemberDetailsDto() {
+    }
+    
+    
+    
+
     public MemberDetailsDto(long memberID, long companyID, String password, String emailID, 
             byte isDeleted, byte activationStatus, boolean isAdmin) {
         this.memberID = memberID;

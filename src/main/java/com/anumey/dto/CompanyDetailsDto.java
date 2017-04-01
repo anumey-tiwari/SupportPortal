@@ -16,7 +16,13 @@ public class CompanyDetailsDto {
     private long signallingID;
     private long chatID;
 
-    public CompanyDetailsDto(long companyID, String name, String emailId, long signallingID, long chatID) {
+    public CompanyDetailsDto() {
+    }
+
+    
+    
+    public CompanyDetailsDto(long companyID, String name, String emailId, 
+            long signallingID, long chatID) {
         this.companyID = companyID;
         this.name = name;
         this.emailId = emailId;
